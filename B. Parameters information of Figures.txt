@@ -1,0 +1,194 @@
+This README.txt file was generated on <20230201> by <Mengxiang Zhang>
+
+-------------------
+GENERAL INFORMATION
+-------------------
+
+1. Title of Dataset:Supporting Data for "Assessing Water Allocation Scheme for Integrated Green Infrastructures and Water Resources Management with a Bi-level Multiagent Framework"
+
+2. Author Information
+
+First Author Contact Information
+    Name:Mengxiang Zhang
+    Faculty:Faculty of engineering
+    Email: mxzhang6@connect.hku.hk
+
+Corresponding Author Contact Information
+    Name:Ting Fong May Chui
+    Faculty:Faculty of engineering
+    Email: maychui@hku.hk
+
+---------------------
+DATA & FILE OVERVIEW
+---------------------
+
+Directory of Files:
+   A. Filename:  Data of Figures      
+      Short description: Data used to plot Figure 4 - 9      
+
+
+        
+   B. Filename: N/A        
+      Short description:      
+
+
+        
+   C. Filename: N/A       
+      Short description:
+
+
+Additional Notes on File Relationships, Context, or Content 
+(for example, if a user wants to reuse and/or cite your data, 
+what information would you want them to know?): N/A             
+
+File Naming Convention:The file is named by the names of Figures in the paper.
+
+-----------------------------------------
+DATA DESCRIPTION FOR: [Figure 4]
+-----------------------------------------
+
+1. Number of variables: 2
+
+2. Number of cases/rows: 5
+
+3. Missing data codes: N/A
+       
+4. Variable List
+
+    A. Name: <Mean unit water costs>
+       Description: <This metric measures the cost level of water resources allocation within the watershed. It is calculated by dividing the total IGWM costs by the total amount of water supplied in the watershed.>
+                    Value labels if appropriate
+
+    B. Name: <Water allocation Gini coefficient>
+       Description: <Water allocation Gini coefficient: This metric quantifies the equity level of water resources allocation within the watershed. It can be calculated using Equation 5a.>
+                    Value labels if appropriate
+
+
+-----------------------------------------
+DATA DESCRIPTION FOR: [Figure 5]
+-----------------------------------------
+
+1. Number of variables: 2
+
+2. Number of cases/rows: 5
+
+3. Missing data codes: N/A
+       
+4. Variable List
+
+    A. Name: <Mean ratio of available surface water>
+       Description: <This metric assesses the extent of surface water usage for withdrawal within the watershed. It is determined by averaging the monthly ratio of available river storage levels for water withdrawal to the maximum theoretical storage levels in the watershed.>
+                     Value labels if appropriate
+
+    B. Name: <Ratio of water cycle>
+       Description: <This metric measures the degree of urban stored water utilization by calculating the ratio of the total amount of water supplied to the total amount of urban stored water in a year.>
+                     Value labels if appropriate
+
+-----------------------------------------
+DATA DESCRIPTION FOR: [Figure 6]
+-----------------------------------------
+
+1. Number of variables: 2
+
+2. Number of cases/rows: 8
+
+3. Missing data codes:N/A
+       
+
+4. Variable List
+
+    A. Name: <Mean unit water costs>
+       Description: <This metric measures the cost level of water resources allocation within the watershed. It is calculated by dividing the total IGWM costs by the total amount of water supplied in the watershed.>
+                    Value labels if appropriate
+
+    B. Name: <Water allocation Gini coefficient>
+       Description: <Water allocation Gini coefficient: This metric quantifies the equity level of water resources allocation within the watershed. It can be calculated using Equation 5a.>
+                    Value labels if appropriate
+
+-----------------------------------------
+DATA DESCRIPTION FOR: [Figure 7]
+-----------------------------------------
+
+1. Number of variables: 2
+
+
+2. Number of cases/rows: 8
+
+
+3. Missing data codes:N/A
+       
+
+4. Variable List
+    
+    A. Name: <Mean ratio of available surface water>
+       Description: <This metric assesses the extent of surface water usage for withdrawal within the watershed. It is determined by averaging the monthly ratio of available river storage levels for water withdrawal to the maximum theoretical storage levels in the watershed.>
+                     Value labels if appropriate
+
+    B. Name: <Ratio of water cycle>
+       Description: <This metric measures the degree of urban stored water utilization by calculating the ratio of the total amount of water supplied to the total amount of urban stored water in a year.>
+                     Value labels if appropriate
+
+
+
+-----------------------------------------
+DATA DESCRIPTION FOR: [Figure 8]
+-----------------------------------------
+
+1. Number of variables: 1
+
+
+2. Number of cases/rows: 2 * 4 * 5
+
+
+3. Missing data codes:N/A
+       
+
+4. Variable List
+    
+    A. Name: <Mean unit water costs>
+       Description: <This metric measures the cost level of water resources allocation within the watershed. It is calculated by dividing the total IGWM costs by the total amount of water supplied in the watershed.>
+                    Value labels if appropriate
+
+
+-----------------------------------------
+DATA DESCRIPTION FOR: [Figure 9]
+-----------------------------------------
+
+1. Number of variables: 1
+
+
+2. Number of cases/rows: 2 * 4 * 5
+
+
+3. Missing data codes:N/A
+       
+
+4. Variable List
+    
+    A. Name: <Water allocation Gini coefficient>
+       Description: <Water allocation Gini coefficient: This metric quantifies the equity level of water resources allocation within the watershed. It can be calculated using Equation 5a.>
+                    Value labels if appropriate
+
+--------------------------
+METHODOLOGICAL INFORMATION
+--------------------------
+
+1. Software-specific information:
+<create a new entry for each qualifying software program>
+
+Name: Microsoft Excel
+Version: Microsoft 365
+System Requirements: macOS
+Open Source? (Y/N): Y
+
+
+
+Additional Notes(such as, will this software not run on 
+certain operating systems?):N/A
+
+
+2. Equipment-specific information:
+
+Manufacturer:N/A
+Model:N/A
+
