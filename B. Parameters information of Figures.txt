@@ -1,12 +1,12 @@
-This README.txt file was generated on <20260606> by <Mengxiang Zhang>
+This README.txt file was generated on <20261111> by <Mengxiang Zhang>
 
 -------------------
 GENERAL INFORMATION
 -------------------
 
 1. Title of Dataset: Supporting Data for "A Dynamic Bi-Level Multiagent
-   Framework for Long-Term Integrated Green Infrastructure and Water Resource
-   Management"
+   Framework for Long-Term Integrated Green Infrastructure and Water
+   Resource Management"
 
 2. Author Information
 
@@ -26,9 +26,11 @@ DATA & FILE OVERVIEW
 
 Directory of Files:
    A. Filename:  A. Data of Figures.xlsx
-      Short description: Raw data used to plot Figure 4 - 6 (see the paper
-      for the full bibliographic reference).  Each sheet in the workbook
-      corresponds to one body-text figure.
+      Short description: Raw data used to plot the body-text data figures
+      (Figures 5-8) of the revised manuscript.  Each sheet in the workbook
+      corresponds to one body-text figure.  Body-text Figures 1-4 are
+      conceptual diagrams and a study-area map without underlying data
+      series and therefore have no workbook sheet.
 
    B. Filename:  B. Parameters information of Figures.txt
       Short description: This file -- describes the variables, units, and
@@ -39,205 +41,239 @@ Directory of Files:
       Short description:
 
 Additional Notes on File Relationships, Context, or Content
-(for example, if a user wants to reuse and/or cite your data,
+(for example, if a user wants to reuse and/or cite this data,
 what information would you want them to know?):
 
    - All raw data are produced by the dynamic bi-level multiagent system
      (DBL-MAS) presented in the manuscript; the simulation is run for a
-     10-year horizon on a hypothetical case study modelled after the
-     Boulder City - Yuma section of the Colorado River Lower Basin.
-   - Each body-text figure aggregates data from 3 water allocation schemes
-     (WTS = Water Trading Scheme, WQS = Water Quota Scheme, WTaS = Water
-     Tariff Scheme) crossed with up to 4 performance metrics.  The annual
-     series are stored per year (Year 1 ... Year 10).
-   - "LT mean (PV)" is the 10-year present-value mean of the annual series
-     (1/(1 + dr) * arithmetic mean, with dr = 0.05, the discount rate used
-     in the simulation), reported in $/m^3 or as a Gini / ratio value.
-   - "ST baseline" is the equivalent value obtained from the 1-year
-     short-term IGWM simulation (used in the manuscript as a comparison
-     reference for the long-term outcome).
+     10-year planning horizon on a hypothetical case study modelled after
+     the Boulder City - Yuma section of the Colorado River Lower Basin
+     (seven river-connected urban areas, UA 1 - UA 7).
+   - Each policy-GI scenario and sensitivity setting was simulated across
+     ten independent optimization runs under identical inputs and parameter
+     bounds.  Across the ten replicate runs, outcomes are summarized by the
+     sample mean, the sample standard deviation (SD, denominator nine),
+     and the observed minimum-maximum range.
+   - Each body-text data figure aggregates data from 3 water allocation
+     schemes (WTS = Water Trading Scheme, WQS = Water Quota Scheme, WTaS =
+     Water Tariff Scheme) and reports two performance metrics: the mean
+     unit water cost and the water allocation Gini coefficient.
+   - The present-value convention used in the manuscript is
+     horizon summary = mean(annual series) / (1 + dr) with the baseline
+     annual discount rate dr = 0.05.
+   - "Fixed ST comparator" values correspond to the equivalent metrics
+     from a 1-year short-term IGWM simulation (planning horizon Y = 1
+     without inter-annual GI accumulation or multi-year demand updates),
+     used in the manuscript as fixed comparison references for the
+     long-term outcomes.
 
-File Naming Convention:  The file is named by the names of the figures in
-the paper.  Each sheet inside the workbook follows the same naming pattern.
+File Naming Convention:  The workbook is named after its role (raw data of
+the figures).  Each sheet inside the workbook follows the naming pattern
+"Figure <n> (<internal label>)", where <n> is the body-text figure number
+of the revised manuscript.
 
 ============================================================
-DATA DESCRIPTION FOR: [Figure 4 (lt_perf)]
+DATA DESCRIPTION FOR: [Figure 5 (lt_perf)]
 ============================================================
 
-Figure 4 plots the long-term performance of the watershed-scale IGWM under
-the three water allocation schemes (WTS, WQS, WTaS) on a 4-row x 3-column
-panel grid:
+Figure 5 plots annual mean unit cost (panels a-c) and the Gini coefficient
+(panels d-f) for the three water allocation schemes (WTS, WQS, WTaS) on a
+2-row x 3-column panel grid (with-GI configuration):
 
-   Rows:  Unit Cost ($/m^3) | Gini coefficient | Available surface
-          water ratio      | Water cycle ratio
-   Cols:  WTS               | WQS              | WTaS
+   Rows:  Mean unit cost ($/m^3) | Gini coefficient
+   Cols:  WTS                     | WQS             | WTaS
 
-Within each panel the solid line with markers shows the annual long-term
-IGWM trajectory over the 10-year simulation, the dashed line marks the
-long-term present-value mean, and the dotted line marks the 1-year
-short-term baseline.  Numerical long-term (LT) and short-term (ST) values
-are inset in each panel of the figure and replicated in the workbook.
+Within each panel the line with markers shows the ten-run annual mean over
+the 10-year simulation, the shaded band shows the observed minimum-maximum
+range across the ten replicate runs, and the dotted horizontal line marks
+the scheme-specific fixed short-term (ST) comparator.
 
-1. Number of variables: 4 metrics x 1 scenario (long-term IGWM) x
-                         3 schemes = 12 series
+1. Number of variables: 2 metrics x 3 schemes x 3 ten-run statistics
+                         (mean / minimum / maximum) = 18 annual series
    Number of years per series: 10 (Year 1 ... Year 10)
-   Plus 12 long-term present-value means and 12 short-term baselines.
+   Plus 6 fixed ST comparators (one per metric x scheme).
 
-2. Number of cases/rows: 3 (one row per scheme, four blocks total) +
-                          12 (3 schemes x 4 metrics) LT/ST summary columns
+2. Number of cases/rows: 9 (one row per scheme x statistic, two metric
+                          blocks total)
 
 3. Missing data codes: N/A
 
 4. Variable List
 
-   A. Name: <Unit Cost ($/m^3)>
+   A. Name: <Mean unit cost ($/m^3)>
       Description: <This metric measures the cost level of water
       resources allocation within the watershed.  It is calculated by
       dividing the total present-value IGWM costs by the total amount
-      of water supplied in the watershed over the 10-year horizon.>
+      of water supplied in the watershed, evaluated annually over the
+      10-year horizon.>
       Value labels if appropriate: USD per cubic metre.
 
    B. Name: <Gini coefficient>
       Description: <Water allocation Gini coefficient.  This metric
-      quantifies the equity level of water resources allocation within
-      the watershed.  It is computed from the per-capita water volumes
-      across the seven urban areas (see Eq. C404a in the manuscript).>
+      quantifies inter-city disparity in cost-normalized water supply
+      within the watershed.  It is computed from the annual
+      cost-normalized water supply volumes WVC_i(y) (m^3/$; Eq. C404a
+      in the manuscript) across the seven urban areas.>
       Value labels if appropriate: dimensionless, [0, 1].
 
-   C. Name: <Available surface water ratio>
-      Description: <This metric assesses the extent of surface water
-      usage for withdrawal within the watershed.  It is the average
-      monthly ratio of available river storage levels (for withdrawal)
-      to the maximum theoretical storage levels in the watershed.>
-      Value labels if appropriate: dimensionless, [0, 1].
-
-   D. Name: <Water cycle ratio>
-      Description: <This metric measures the degree of urban stored
-      water utilization, by calculating the ratio of the total amount
-      of water supplied to the total amount of urban stored water in
-      a year.  Higher values indicate more active recycling of the
-      urban water stock.>
-      Value labels if appropriate: dimensionless, [0, 1].
+   C. Name: <Fixed ST comparator>
+      Description: <Equivalent metric from the 1-year short-term IGWM
+      simulation, drawn as the dotted horizontal line in each panel.>
+      Value labels if appropriate: USD per cubic metre (unit cost) or
+      dimensionless (Gini).
 
 ============================================================
-DATA DESCRIPTION FOR: [Figure 5 (g_perf)]
+DATA DESCRIPTION FOR: [Figure 6 (g_perf)]
 ============================================================
 
-Figure 5 compares the long-term IGWM performance with vs. without GIs
-under the three water allocation schemes (WTS, WQS, WTaS) on a 4-row x
-3-column panel grid (same metric / scheme layout as Figure 4).
+Figure 6 shows annual with-GIs-minus-without-GIs differences in mean unit
+cost (panels a-c) and the Gini coefficient (panels d-f) for the three
+water allocation schemes (WTS, WQS, WTaS) on a 2-row x 3-column panel
+grid (same metric / scheme layout as Figure 5).
 
-Within each panel the navy line with circle markers shows the annual
-trajectory with GIs, the amber line with square markers shows the
-annual trajectory without GIs, and the dashed lines mark the 10-year
-present-value mean under each scenario.  Numerical with-GIs (w/) and
-without-GIs (w/o) means are inset in each panel of the figure and
-replicated in the workbook.
+Within each panel the line with markers shows the difference between the
+ten-run scenario means for each year, the shaded band shows the
+descriptive envelope [min(with) - max(without), max(with) - min(without)]
+across the two scenario run ranges, and the horizontal solid line marks
+zero difference.  Each scenario contains ten runs.
 
-1. Number of variables: 4 metrics x 2 scenarios (with GIs / without GIs)
-                         x 3 schemes = 24 series
+1. Number of variables: 2 metrics x 3 schemes x 5 statistics = 30 annual
+                         series
    Number of years per series: 10 (Year 1 ... Year 10)
-   Plus 24 long-term present-value means.
 
-2. Number of cases/rows: 6 (one row per scheme x scenario combination,
-                          four blocks total) + 24 LT summary columns
+2. Number of cases/rows: 15 (one row per scheme x statistic, two metric
+                          blocks total)
 
 3. Missing data codes: N/A
 
 4. Variable List
 
-   A. Name: <Unit Cost ($/m^3)>
-      Description: <Mean unit water cost under the with-GIs and
-      without-GIs scenarios for each scheme; same definition as in
-      Figure 4.>
-      Value labels if appropriate: USD per cubic metre.
+   A. Name: <Mean (with GIs) / Mean (without GIs)>
+      Description: <Ten-run annual scenario means of the mean unit cost
+      and the Gini coefficient under the with-GIs and without-GIs
+      scenarios; same metric definitions as in Figure 5.>
+      Value labels if appropriate: USD per cubic metre (unit cost) or
+      dimensionless (Gini).
 
-   B. Name: <Gini coefficient>
-      Description: <Water allocation Gini coefficient under the
-      with-GIs and without-GIs scenarios; same definition as in
-      Figure 4.>
-      Value labels if appropriate: dimensionless, [0, 1].
+   B. Name: <Difference of annual means (with - without)>
+      Description: <Year-by-year difference between the ten-run with-GIs
+      and without-GIs scenario means; this is the line plotted in each
+      panel of Figure 6.>
+      Value labels if appropriate: USD per cubic metre (unit cost
+      differences) or dimensionless (Gini differences).
 
-   C. Name: <Available surface water ratio>
-      Description: <Mean available surface water ratio under the
-      with-GIs and without-GIs scenarios; same definition as in
-      Figure 4.>
-      Value labels if appropriate: dimensionless, [0, 1].
-
-   D. Name: <Water cycle ratio>
-      Description: <Mean water cycle ratio under the with-GIs and
-      without-GIs scenarios; same definition as in Figure 4.>
-      Value labels if appropriate: dimensionless, [0, 1].
+   C. Name: <Envelope lower / Envelope upper>
+      Description: <Descriptive envelope across the two scenario run
+      ranges: lower = min(with-GI runs) - max(without-GI runs); upper =
+      max(with-GI runs) - min(without-GI runs).  This is the shaded band
+      plotted in each panel of Figure 6.>
+      Value labels if appropriate: same units as the corresponding
+      difference series.
 
 ============================================================
-DATA DESCRIPTION FOR: [Figure 6 (c_g_sens)]
+DATA DESCRIPTION FOR: [Figure 7 (c_g_sens)]
 ============================================================
 
-Figure 6 shows the sensitivity of long-term IGWM mean unit water cost
-and Gini coefficient to two socio-hydrologic drivers across the WTS,
+Figure 7 shows the sensitivity of the horizon mean unit water cost and
+the Gini coefficient to two socio-hydrologic drivers across the WTS,
 WQS, and WTaS allocation schemes on a 2-row x 2-column panel grid:
 
-   Rows:  Mean unit water cost ($/m^3) | Gini coefficient
-   Cols:  Discount rate sweep         | Hydroclimatic forcing sweep
-           (0% - 10%, baseline 5%)       (50% - 150% of baseline)
+   Rows:  Mean unit cost ($/m^3) | Gini coefficient
+   Cols:  Discount-rate sweep    | Combined hydroclimatic sweep
 
    Panel (a) cost vs. discount rate
-   Panel (b) cost vs. hydroclimatic
+   Panel (b) cost vs. hydroclimatic level
    Panel (c) Gini vs. discount rate
-   Panel (d) Gini vs. hydroclimatic
+   Panel (d) Gini vs. hydroclimatic level
+
+Within each panel the lines with markers show the ten-run means at each
+driver level and the shaded bands show the observed minimum-maximum run
+ranges.  Each level contains ten replicate runs; the sweeps are
+one-factor-at-a-time experiments around the common baseline experiment.
 
 1. Number of variables:
-   - Discount rate sweep: 2 metrics x 3 schemes x 5 levels = 30 cells
-   - Hydroclimatic sweep: 2 metrics x 3 schemes x 5 levels = 30 cells
-   Total = 60 cells.
+   - Discount-rate sweep: 2 metrics x 3 schemes x 3 statistics x
+     5 levels = 90 cells
+   - Combined hydroclimatic sweep: 2 metrics x 3 schemes x 3 statistics
+     x 5 levels = 90 cells
+   Total = 180 cells.
 
-2. Number of cases/rows: 6 (one row per scheme x metric combination,
-                          two blocks for the two drivers)
+2. Number of cases/rows: 18 (one row per metric x scheme x statistic,
+                          two driver blocks total)
 
 3. Missing data codes: N/A
 
 4. Variable List
 
-   A. Name: <Mean unit water cost ($/m^3)>
-      Description: <This metric measures the cost level of water
-      resources allocation within the watershed.  It is calculated by
-      dividing the total present-value IGWM costs by the total amount
-      of water supplied in the watershed over the 10-year horizon.>
+   A. Name: <Mean unit cost ($/m^3)>
+      Description: <Horizon (10-year present-value) mean unit water cost
+      at each driver level; same definition as in Figure 5.>
       Value labels if appropriate: USD per cubic metre.
 
    B. Name: <Gini coefficient>
-      Description: <Water allocation Gini coefficient.  This metric
-      quantifies the equity level of water resources allocation within
-      the watershed.  It is computed from the per-capita water volumes
-      across the seven urban areas (see Eq. C404a in the manuscript).>
+      Description: <Horizon water allocation Gini coefficient at each
+      driver level; same definition as in Figure 5.>
       Value labels if appropriate: dimensionless, [0, 1].
 
 5. Driver sweep ranges
-   - Discount rate: 0%, 2.5%, 5% (baseline), 7.5%, 10%
-   - Hydroclimatic forcing (upstream inflow and rainfall): 50%, 75%,
-     100% (baseline), 125%, 150% of baseline.
+   - Annual discount rate: 0%, 2.5%, 5% (baseline), 7.5%, 10%
+   - Combined hydroclimatic forcing (upstream river inflow and local
+     rainfall jointly scaled): 50%, 75%, 100% (baseline), 125%, 150% of
+     the historical monthly forcing series.
+
+============================================================
+DATA DESCRIPTION FOR: [Figure 8 (cost_gini_synthesis)]
+============================================================
+
+Figure 8 synthesizes the horizon (10-year present-value) mean unit cost
+and Gini coefficient for the six policy-GI combinations (WTS, WQS, WTaS
+x with GIs / without GIs) in a single cost-versus-Gini plane.
+
+Filled markers denote the with-GIs scenarios and open markers the
+without-GIs scenarios; colors and marker shapes distinguish the three
+schemes.  Horizontal and vertical whiskers show +/-1 sample SD across
+the ten runs for each variable.  The arrows connect without-GI to
+with-GI outcomes within each scheme and represent scenario contrasts
+rather than temporal trajectories.
+
+1. Number of variables: 2 metrics x 2 scenarios x 3 schemes = 12
+                         horizon summary series, each summarized by a
+                         ten-run mean and sample SD (n = 10 runs).
+
+2. Number of cases/rows: 6 (one row per scheme x scenario)
+
+3. Missing data codes: N/A
+
+4. Variable List
+
+   A. Name: <Horizon mean unit cost ($/m^3), mean / sample SD>
+      Description: <Ten-run mean and sample SD of the 10-year
+      present-value horizon mean unit cost for each scheme-GI
+      combination; same metric definition as in Figure 5.>
+      Value labels if appropriate: USD per cubic metre.
+
+   B. Name: <Horizon mean Gini coefficient, mean / sample SD>
+      Description: <Ten-run mean and sample SD of the 10-year
+      present-value horizon water allocation Gini coefficient for each
+      scheme-GI combination; same metric definition as in Figure 5.>
+      Value labels if appropriate: dimensionless, [0, 1].
 
 --------------------------
 METHODOLOGICAL INFORMATION
 --------------------------
 
 1. Software-specific information:
-   <create a new entry for each qualifying software program>
-
-   Name: Microsoft Excel
-   Version: Microsoft 365
-   System Requirements: macOS
-   Open Source? (Y/N): Y
 
    Name: Python
    Version: 3.9
    System Requirements: macOS / Linux / Windows
    Open Source? (Y/N): Y
    Notes: The figure panels were assembled with the matplotlib library;
-          the raw 10-year annual series and the sensitivity sweep values
-          were produced by the DBL-MAS framework described in the
-          manuscript and the simulation was solved with the S-APSO
-          algorithm (see Section 2.3 and the Supplementary Material).
+          the raw annual series, contrast series, sensitivity sweep
+          values, and horizon summaries were produced by the DBL-MAS
+          framework described in the manuscript and the simulation was
+          solved with the nested S-APSO algorithm (see Section 2 of the
+          manuscript and the Supporting Information).
 
    Additional Notes (such as, will this software not run on
    certain operating systems?): N/A
