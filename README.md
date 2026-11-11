@@ -1,8 +1,8 @@
 # AWAS_IGWM
 
-Supporting data for the paper **"A Dynamic Bi-Level Multiagent Framework for
-Long-Term Integrated Green Infrastructure and Water Resource Management"**,
-submitted to *Water Resources Research*.
+Supporting data for the paper **"Co-Evolution of Water Policy and Green
+Infrastructure in Water-Stressed Basins: A Dynamic Bi-Level Multi-Agent
+Approach"**, submitted to *Water Resources Research*.
 
 ## What this repository contains
 

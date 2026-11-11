@@ -4,9 +4,9 @@ This README.txt file was generated on <20261111> by <Mengxiang Zhang>
 GENERAL INFORMATION
 -------------------
 
-1. Title of Dataset: Supporting Data for "A Dynamic Bi-Level Multiagent
-   Framework for Long-Term Integrated Green Infrastructure and Water
-   Resource Management"
+1. Title of Dataset: Supporting Data for "Co-Evolution of Water Policy and
+   Green Infrastructure in Water-Stressed Basins: A Dynamic Bi-Level
+   Multi-Agent Approach"
 
 2. Author Information
 
